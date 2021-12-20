@@ -1,0 +1,8 @@
+.header__container {
+  @extend %flex;
+  border-bottom: 1px solid $border-primary;
+}
+
+.header__navigation {
+  margin-left: 93px;
+}

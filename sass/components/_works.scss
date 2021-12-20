@@ -1,0 +1,27 @@
+.works {
+  padding-top: 47px;
+}
+
+.works-list {
+  @extend %flex;
+  &__item {
+    flex-basis: calc(100% / 3);
+    position: relative;
+  }
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__description {
+    position: absolute;
+    bottom: 0;
+    padding: 27px 0;
+    width: 100%;
+    background: rgba($background-secondary, 0.8);
+  }
+  &__text {
+    @include font(14px, 1.14, 0.03em, 700);
+    text-align: center;
+    text-transform: uppercase;
+    color: $background-primary;
+  }
+}
