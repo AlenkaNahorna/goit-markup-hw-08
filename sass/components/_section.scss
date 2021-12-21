@@ -6,11 +6,16 @@
   }
 
   &__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
-    @include font(36px, 1.16, 0.03em, 700);
+    @include font(28px, 1.18, 0.03em, 700);
     text-align: center;
 
     color: $primary-color;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+      @include font(36px, 1.16, 0.03em, 700);
+    }
   }
 }

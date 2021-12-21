@@ -2,15 +2,29 @@
   background-color: $background-section;
 }
 .team-list {
-  @extend %flex;
+  margin-bottom: -30px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
   &__item {
-    flex-basis: calc(100% / 4);
+    margin-bottom: 30px;
+
     background: $background-primary;
     box-shadow: 0px 1px 3px rgba($logo-primary, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba($logo-primary, 0.2);
     border-radius: 0px 0px 4px 4px;
-  }
-  &__item:not(:last-child) {
-    margin-right: 30px;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 2 - 30px);
+      margin-right: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc(100% / 4 - 30px);
+    }
   }
 }
