@@ -1,0 +1,30 @@
+.mobile-menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0;
+  z-index: 5;
+  padding: 48px 40px;
+
+  background: $background-primary;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  &__btm-wrap {
+    margin-top: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+// .mobile-menu__contacts-wrap {
+//   margin-top: auto;
+//   }

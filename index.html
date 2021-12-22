@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <a class="logo logo--primary link" href="./" lang="en">
           <span class="logo__web">Web</span>Studio
@@ -54,8 +54,67 @@
             >
           </li>
         </ul>
+
+        <button type="button" class="open-menu-btn">
+          <svg class="open-menu-btn__icon" width="24px" height="16px">
+            <use href="./images/icons.svg#mobile-menu"></use>
+          </svg>
+        </button>
+        <!--------------------- MOBILE-MENU ---------------->
+        <div class="mobile-menu is-hidden">
+          <div class="mobile-menu__wrap">
+            <div class="mobile-menu__top-wrap">
+              <button type="button" class="close-menu-btn">
+                <svg class="close-menu-btn__icon" width="19px" height="19px">
+                  <use href="./images/icons.svg#close-black"></use>
+                </svg>
+              </button>
+
+              <ul class="nav-list-mob list">
+                <li class="nav-list-mob__item">
+                  <a class="nav-list-mob__link link nav-list-mob--current" href="./">Студия</a>
+                </li>
+                <li class="nav-list-mob__item">
+                  <a class="nav-list-mob__link link" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="nav-list-mob__item">
+                  <a class="nav-list-mob__link link" href="">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="mobile-menu__btm-wrap">
+              <ul class="primary-contacts-mob list">
+                <li class="primary-contacts-mob__item">
+                  <a class="primary-contacts-mob__link link" href="tel:+380961111111">
+                    +380961111111</a
+                  >
+                </li>
+                <li class="primary-contacts-mob__item">
+                  <a class="primary-contacts-mob__link link" href="mailto:info@devstudio.com">
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+
+              <ul class="social-list-secondary list">
+                <li class="social-list-secondary__item">
+                  <a href="" class="social-list-secondary__link link"> Instagram </a>
+                </li>
+                <li class="social-list-secondary__item">
+                  <a href="" class="social-list-secondary__link link"> Twitter </a>
+                </li>
+                <li class="social-list-secondary__item">
+                  <a href="" class="social-list-secondary__link link"> Facebook </a>
+                </li>
+                <li class="social-list-secondary__item">
+                  <a href="" class="social-list-secondary__link link"> LinkedIn </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    </header> -->
+    </header>
 
     <main>
       <section class="hero">
@@ -582,5 +641,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

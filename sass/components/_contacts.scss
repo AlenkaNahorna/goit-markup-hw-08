@@ -1,12 +1,14 @@
 .primary-contacts {
-  @extend %flex;
-
-  &__item:not(:last-child) {
-    margin-right: 50px;
+  display: none;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: block;
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
   &__link {
-    @extend %flex;
-    justify-content: center;
+    display: flex;
+    align-items: center;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     @include font(14px, 1.14, 0.02em, 500);
     color: $primary-shade-color;
@@ -19,9 +21,19 @@
     margin-right: 10px;
     fill: currentColor;
   }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 }
 .header__contacts {
-  margin-left: auto;
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+  }
 }
 
 .secondary-contacts {
@@ -44,5 +56,21 @@
   &__link:hover,
   &__link:focus {
     color: $accent-color;
+  }
+}
+
+.primary-contacts-mob {
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &__link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include font(24px, 1.17, 0.02em, 500);
+    color: $primary-shade-color;
+  }
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+    @include font(34px, 1.18, 0.02em, 500);
   }
 }
