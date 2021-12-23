@@ -8,18 +8,23 @@
   top: 0;
   left: 0;
   transition: opacity 500ms, visibility 500ms;
-}
 
-.backdrop.is-hidden .modal {
-  transform: scale(2) rotate(180deg) translate(110px, 110px);
+  .is-hidden .modal {
+    transform: scale(2) rotate(180deg) translate(110px, 110px);
+  }
 }
 
 .modal {
   position: absolute;
   padding: 40px;
-
-  width: 528px;
+  width: 98%;
+  max-width: 450px;
   min-height: 581px;
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
+
   background-color: $background-primary;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba($logo-primary, 0.12), 0px 1px 1px rgba($logo-primary, 0.14),
@@ -29,14 +34,18 @@
   left: 50%;
 
   transform: scale(1) rotate(0) translate(-50%, -50%);
-  transition: transform 300ms;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &__title {
     margin-bottom: 12px;
 
-    @include font(20px, 1.15, 0.03em, 700);
+    @include font(20px, 1.5, 0.03em, 700);
     text-align: center;
 
     color: $primary-color;
+
+    @media screen and (min-width: 1200px) {
+      @include font(20px, 1.15, 0.03em, 700);
+    }
   }
 }
 

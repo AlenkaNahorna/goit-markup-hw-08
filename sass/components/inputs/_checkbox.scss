@@ -13,7 +13,11 @@
   justify-items: center;
 
   cursor: pointer;
-  @include font(14px, 1.71, 0.03em, 400);
+  @include font(12px, 1.17, 0.03em, 400);
+
+  @media screen and (min-width: 1200px) {
+    @include font(14px, 1.71, 0.03em, 400);
+  }
 
   .checkbox__icon-wrapper {
     @extend %flex;
