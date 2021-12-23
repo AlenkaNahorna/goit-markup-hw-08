@@ -2,20 +2,56 @@
   background-color: $background-secondary;
   padding: 60px 0;
   &__container {
-    @extend %flex;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+  }
+  &__container-wrap {
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 165px;
+
+      @media screen and (min-width: 1200px) {
+        margin: 0;
+      }
+    }
   }
   &__social {
-    margin-left: 70px;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-top: 0;
+      margin-left: 70px;
+    }
   }
   &__title {
     margin-bottom: 20px;
 
     @include font(14px, 1.14, 0.03em, 700);
-
+    text-align: center;
     text-transform: uppercase;
     color: $background-primary;
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
   }
   &__subscribe {
-    margin-left: auto;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+      margin-left: auto;
+    }
   }
 }

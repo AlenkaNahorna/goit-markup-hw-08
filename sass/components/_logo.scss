@@ -1,6 +1,8 @@
 .logo {
+  display: block;
   font-family: Raleway;
   @include font(26px, 1.19, 0.03em, 700);
+  text-align: center;
 
   &__web {
     color: $accent-color;
