@@ -36,7 +36,7 @@
   }
 }
 
-.nav-list-mob {
+.nav-list-mobile {
   &__item:not(:last-child) {
     margin-bottom: 32px;
   }
@@ -49,7 +49,7 @@
   &__link:focus {
     color: $accent-color;
   }
-  &--current {
-    color: $accent-color;
-  }
+}
+.nav-list-mobile__link--current {
+  color: $accent-color;
 }

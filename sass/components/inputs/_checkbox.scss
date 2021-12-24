@@ -26,6 +26,10 @@
     margin-right: 7px;
     padding: 3px 2px;
 
+    @media screen and (max-width: 480px) {
+      margin-right: 35px;
+    }
+
     width: 16px;
     height: 15px;
     border: 2px solid $primary-color;

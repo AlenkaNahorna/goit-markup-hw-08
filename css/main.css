@@ -123,7 +123,7 @@ body {
   }
 }
 
-.header__container {
+.header {
   border-bottom: 1px solid #ececec;
 }
 
@@ -185,11 +185,11 @@ body {
   left: 0;
 }
 
-.nav-list-mob__item:not(:last-child) {
+.nav-list-mobile__item:not(:last-child) {
   margin-bottom: 32px;
 }
 
-.nav-list-mob__link {
+.nav-list-mobile__link {
   font-size: 40px;
   line-height: 1.16;
   letter-spacing: 0.02em;
@@ -198,11 +198,11 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-list-mob__link:hover, .nav-list-mob__link:focus {
+.nav-list-mobile__link:hover, .nav-list-mobile__link:focus {
   color: #2196f3;
 }
 
-.nav-list-mob--current {
+.nav-list-mobile__link--current {
   color: #2196f3;
 }
 
@@ -356,7 +356,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .hero {
-    padding-bottom: 200px 0;
+    padding: 200px 0;
     max-width: 1600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-desk-1x.jpg");
   }
@@ -364,7 +364,7 @@ body {
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero-desk-2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-desk-2x.jpg");
   }
 }
 
@@ -466,10 +466,9 @@ body {
 }
 
 .open-menu-btn {
-  width: 40px;
-  height: 40px;
   justify-content: center;
-  padding: 12px 8px;
+  padding: 22px 15px;
+  margin-right: -15px;
   margin-left: auto;
   color: #000000;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -520,26 +519,22 @@ body {
   }
 }
 
-.features-list {
-  margin-bottom: -30px;
-}
-
 @media screen and (min-width: 768px) {
   .features-list {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -30px;
+    margin: -15px;
   }
 }
 
-.features-list__item {
+.features-list__item:not(:last-child) {
   margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .features-list__item {
     flex-basis: calc(100% / 2 - 30px);
-    margin-right: 30px;
+    margin: 15px;
   }
 }
 
@@ -725,6 +720,7 @@ body {
 .social-list-secondary {
   display: flex;
   margin-top: 64px;
+  margin-left: -10px;
 }
 
 .social-list-secondary__item {
@@ -748,8 +744,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: -30px;
-  margin-right: -30px;
+  margin: -15px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -761,8 +756,7 @@ body {
 .clients-list__item {
   min-width: 170px;
   min-height: 92px;
-  margin-bottom: 30px;
-  margin-right: 30px;
+  margin: 15px;
   flex-basis: calc(100% / 2 - 30px);
 }
 
@@ -1004,7 +998,7 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 }
 
-.mobile-menu__wrap {
+.mobile-menu__container {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -1124,6 +1118,12 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 480px) {
+  .checkbox__label .checkbox__icon-wrapper {
+    margin-right: 35px;
+  }
+}
+
 .checkbox__input:checked + .checkbox__label .checkbox__icon-wrapper {
   background-color: #2196f3;
   border: 0;
@@ -1141,7 +1141,7 @@ body {
 .filter {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin: -8px -8px -8px 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -1158,13 +1158,13 @@ body {
   }
 }
 
-.filter__item:not(:last-child) {
-  margin-right: 8px;
-  margin-bottom: 15px;
+.filter__item {
+  margin: 8px 8px 8px 0;
 }
 
 .portfolio-list {
   margin-bottom: -30px;
+  margin-top: 40px;
 }
 
 @media screen and (min-width: 768px) {
