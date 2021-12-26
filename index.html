@@ -36,40 +36,39 @@
             </li>
           </ul>
         </nav>
-        <ul class="primary-contacts header__contacts list">
-          <li class="primary-contacts__item">
-            <a class="primary-contacts__link link" href="mailto:info@devstudio.com">
-              <svg class="primary-contacts__icon" width="16" height="12">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="primary-contacts__item">
-            <a class="primary-contacts__link link" href="tel:+380961111111">
-              <svg class="primary-contacts__icon" width="10" height="16">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +380961111111</a
-            >
-          </li>
-        </ul>
+        <div class="header__contacts-wrap">
+          <ul class="primary-contacts header__contacts list">
+            <li class="primary-contacts__item">
+              <a class="primary-contacts__link link" href="mailto:info@devstudio.com">
+                <svg class="primary-contacts__icon" width="16" height="12">
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="primary-contacts__item">
+              <a class="primary-contacts__link link" href="tel:+380961111111">
+                <svg class="primary-contacts__icon" width="10" height="16">
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                +380961111111</a
+              >
+            </li>
+          </ul>
+        </div>
 
-        <button type="button" class="open-menu-btn">
-          <svg class="open-menu-btn__icon" width="24px" height="16px">
+        <button type="button" class="menu-btn" data-mobile-btn>
+          <svg class="menu-btn__icon menu-btn__icon--open" width="24px" height="16px">
             <use href="./images/icons.svg#mobile-menu"></use>
+          </svg>
+          <svg class="menu-btn__icon menu-btn__icon--close" width="19px" height="19px">
+            <use href="./images/icons.svg#close-black"></use>
           </svg>
         </button>
         <!--------------------- MOBILE-MENU ---------------->
-        <div class="mobile-menu is-hidden">
+        <div class="mobile-menu" data-menu-container>
           <div class="mobile-menu__container">
             <div class="mobile-menu__top-wrap">
-              <button type="button" class="close-menu-btn">
-                <svg class="close-menu-btn__icon" width="19px" height="19px">
-                  <use href="./images/icons.svg#close-black"></use>
-                </svg>
-              </button>
-
               <ul class="nav-list-mobile list">
                 <li class="nav-list-mobile__item">
                   <a class="nav-list-mobile__link link nav-list-mobile__link--current" href="./"
@@ -84,15 +83,13 @@
                 </li>
               </ul>
             </div>
-            <div class="mobile-menu__btm-wrap">
-              <ul class="primary-contacts-mob list">
-                <li class="primary-contacts-mob__item">
-                  <a class="primary-contacts-mob__link link" href="tel:+380961111111">
-                    +380961111111</a
-                  >
+            <div class="mobile-menu__bottom-wrap">
+              <ul class="primary-contacts list">
+                <li class="primary-contacts__item">
+                  <a class="primary-contacts__link link" href="tel:+380961111111"> +380961111111</a>
                 </li>
-                <li class="primary-contacts-mob__item">
-                  <a class="primary-contacts-mob__link link" href="mailto:info@devstudio.com">
+                <li class="primary-contacts__item">
+                  <a class="primary-contacts__link link" href="mailto:info@devstudio.com">
                     info@devstudio.com</a
                   >
                 </li>

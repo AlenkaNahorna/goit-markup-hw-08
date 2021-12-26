@@ -1,7 +1,9 @@
 .primary-contacts {
-  display: none;
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    display: block;
     &__item:not(:last-child) {
       margin-bottom: 10px;
     }
@@ -63,9 +65,6 @@
 }
 
 .primary-contacts-mob {
-  &__item:not(:last-child) {
-    margin-bottom: 32px;
-  }
   &__link {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     @include font(24px, 1.17, 0.02em, 500);
