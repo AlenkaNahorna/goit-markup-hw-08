@@ -3,7 +3,7 @@
   justify-content: center;
   flex-wrap: wrap;
   margin: -15px;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     flex-wrap: nowrap;
   }
 
@@ -12,7 +12,19 @@
     min-height: 92px;
     margin: 15px;
     flex-basis: calc(100% / 2 - 30px);
-    @media screen and (min-width: 768px) {
+
+    @media screen and (max-width: 479px) {
+      display: block;
+      margin: 0px;
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $tablet) {
       flex-basis: calc(100% / 3 - 30px);
     }
   }

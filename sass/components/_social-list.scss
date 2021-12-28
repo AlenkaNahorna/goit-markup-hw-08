@@ -42,10 +42,15 @@
 
 .social-list-secondary {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 64px;
   margin-left: -10px;
   &__item {
     padding: 0 10px;
+
+    @media screen and (max-width: 479px) {
+      margin-bottom: 10px;
+    }
   }
   &__item + &__item {
     border-left: 1px solid rgba(33, 33, 33, 0.2);

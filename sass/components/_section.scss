@@ -1,7 +1,7 @@
 .section {
   padding: 60px 0;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     padding: 94px 0;
   }
 
@@ -13,7 +13,7 @@
 
     color: $primary-color;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       margin-bottom: 50px;
       @include font(36px, 1.16, 0.03em, 700);
     }

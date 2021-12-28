@@ -2,21 +2,21 @@
   background-color: $background-secondary;
   padding: 60px 0;
   &__container {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       flex-wrap: nowrap;
       align-items: center;
     }
   }
   &__container-wrap {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       margin-right: 165px;
 
-      @media screen and (min-width: 1200px) {
+      @media screen and (min-width: $desktop) {
         margin: 0;
       }
     }
@@ -24,11 +24,11 @@
   &__social {
     margin-top: 60px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       margin-top: 0;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       margin-left: 70px;
     }
   }
@@ -40,7 +40,7 @@
     text-transform: uppercase;
     color: $background-primary;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       text-align: left;
     }
   }
@@ -48,7 +48,7 @@
     margin-top: 60px;
     text-align: center;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       margin-top: 0;
       margin-left: auto;
     }

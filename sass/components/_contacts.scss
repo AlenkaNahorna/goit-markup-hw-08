@@ -3,12 +3,12 @@
     margin-bottom: 32px;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     &__item:not(:last-child) {
       margin-bottom: 10px;
     }
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     margin-left: auto;
     &__item:not(:last-child) {
       margin-right: 50px;
@@ -19,14 +19,14 @@
     @include font(24px, 1.17, 0.02em, 500);
     color: $primary-shade-color;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       display: flex;
       align-items: center;
       @include font(12px, 1.17, 0.02em, 500);
       transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       display: flex;
       align-items: center;
       @include font(14px, 1.14, 0.02em, 500);
@@ -45,6 +45,12 @@
 
   &__link--big {
     @include font(34px, 1.18, 0.02em, 500);
+
+    @media screen and (max-width: 479px) {
+      @include font(30px, 1.18, 0.02em, 500);
+    }
+  }
+  &__link--accent-color {
     color: $accent-color;
   }
 }
@@ -52,11 +58,11 @@
 .header__contacts {
   display: none;
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     display: block;
     margin-left: auto;
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     display: flex;
     align-items: center;
   }
@@ -65,7 +71,7 @@
 .secondary-contacts {
   &__item:not(:first-child) {
     margin-top: 8px;
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       margin-top: 9px;
     }
   }

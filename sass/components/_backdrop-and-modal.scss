@@ -1,5 +1,6 @@
 .backdrop {
   position: fixed;
+  z-index: 15;
 
   width: 100vw;
   height: 100vh;
@@ -18,10 +19,14 @@
   position: absolute;
   padding: 40px;
   width: 98%;
-  max-width: 450px;
-  min-height: 581px;
+  max-height: 100vh;
+  overflow: auto;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
     width: 528px;
   }
 
@@ -43,7 +48,7 @@
 
     color: $primary-color;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       @include font(20px, 1.15, 0.03em, 700);
     }
   }

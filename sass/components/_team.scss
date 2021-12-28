@@ -2,7 +2,7 @@
   background-color: $background-section;
 }
 .team-list {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -12,7 +12,7 @@
   &__item:not(:last-child) {
     margin-bottom: 30px;
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       margin-bottom: 0;
     }
   }
@@ -23,12 +23,12 @@
       0px 2px 1px rgba($logo-primary, 0.2);
     border-radius: 0px 0px 4px 4px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
       flex-basis: calc(100% / 2 - 30px);
       margin: 15px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
       margin-bottom: 0;
       flex-basis: calc(100% / 4 - 30px);
     }

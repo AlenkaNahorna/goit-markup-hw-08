@@ -4,3 +4,16 @@
   letter-spacing: $ls;
   font-weight: $fw;
 }
+
+@mixin bg-img($url, $withGrad: true) {
+  @if withGrad {
+    background-image: linear-gradient(
+        to right,
+        rgba($background-secondary, 0.4),
+        rgba($background-secondary, 0.4)
+      ),
+      url($url);
+  } @else {
+    background-image: url($url);
+  }
+}
